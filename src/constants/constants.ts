@@ -1,3 +1,5 @@
+import { Feature } from "../components";
+
 export const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/';
 export const IMAGE_SIZES = {
 	backdrop: {
@@ -15,9 +17,9 @@ export const IMAGE_SIZES = {
 		small: 'w92'
 	}
 };
-export const BACKDROP_PLACEHOLDER = 'https://plchldr.co/i/300x169?bg=333333&text=ROSEFLIX';
-export const POSTER_PLACEHOLDER = 'https://plchldr.co/i/342x513?bg=333333&text=ROSEFLIX';
-export const STILL_PLACEHOLDER = 'https://plchldr.co/i/185x104?bg=333333&text=ROSEFLIX';
+export const BACKDROP_PLACEHOLDER = 'https://plchldr.co/i/300x169?bg=333333&text=TyroFlix';
+export const POSTER_PLACEHOLDER = 'https://plchldr.co/i/342x513?bg=333333&text=TyroFlix';
+export const STILL_PLACEHOLDER = 'https://plchldr.co/i/185x104?bg=333333&text=TyroFlix';
 
 export const HEADER_LINKS = [
 	{
@@ -33,33 +35,33 @@ export const HEADER_LINKS = [
 export const FAQS = [
 	{
 		id: 1,
-		header: 'What is Roseflix?',
+		header: 'What is TyroFlix?',
 		body:
-			"Roseflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more on thousands of internet-connected devices.\n\nYou can watch as much as you want, whenever you want, without a single commercial – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!"
+			"TyroFlix is a FREE streaming service that offers tutorial and learning media to help you grow your skills to get the career you want.  There's always something new to discover, and new TV shows and movies are added every week!"
 	},
 	{
 		id: 2,
-		header: 'How much does Roseflix cost?',
+		header: 'How much does TyroFlix cost?',
 		body:
-			'Watch Roseflix on your smartphone, tablet, Smart TV, laptop or streaming device, all for one fixed monthly fee. Plans range from ₱149 to ₱549 a month. No extra costs, no contracts.'
+			'Watch TyroFlix on your smartphone, tablet, Smart TV, laptop or streaming device, all for FREE, FREE , yes FREE'
 	},
 	{
 		id: 3,
 		header: 'Where can I watch?',
 		body:
-			"Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Roseflix account to watch instantly on the web at roseflix.com from your personal computer or on any internet-connected device that offers the Roseflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.\n\nYou can also download your favourite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Roseflix with you anywhere."
+			"Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Tyroflix account to watch instantly on the web at tyroflix.com from your personal computer or on any internet-connected device that offers the TyroFlix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.\n\nYou can also download your favourite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take TyroFlix with you anywhere."
 	},
 	{
 		id: 4,
 		header: 'How do I cancel?',
 		body:
-			'Roseflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.'
+			'TyroFlix is flexible. it is free , and we provide an easy delete account Feature.'
 	},
 	{
 		id: 5,
-		header: 'What can I watch on Roseflix?',
+		header: 'What can I watch on TyroFlix?',
 		body:
-			'Roseflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Roseflix originals, and more. Watch as much as you want, any time you want.'
+			'TyroFlix has an extensive library of tutorials, documentaries, TV shows, award-winning TyroFlix originals, and more. Watch as much as you want, any time you want.'
 	}
 ];
 
@@ -70,7 +72,7 @@ export const FEATURES = [
 		description: 'Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.',
 		video: '',
 		image: '/images/misc/Home-TV.jpg',
-		alt: 'Roseflix on TV'
+		alt: 'TyroFlix on TV'
 	},
 	{
 		id: 2,
@@ -78,7 +80,7 @@ export const FEATURES = [
 		description: 'Save your favorites easily and always have something to watch.',
 		video: '',
 		image: '/images/misc/Home-Mobile.jpg',
-		alt: 'Roseflix on mobile',
+		alt: 'TyroFlix on mobile',
 		direction: 'row-reverse'
 	},
 	{
@@ -86,26 +88,26 @@ export const FEATURES = [
 		title: 'Watch everywhere.',
 		description: 'Stream unlimited movies and TV shows on your phone, tablet, laptop and TV without paying more.',
 		image: '/images/misc/Home-IMac.jpg',
-		alt: 'Roseflix on different devices'
+		alt: 'TyroFlix on different devices'
 	}
 ];
 
 export const FOOTER_LINKS = [
-	{ id: 1, text: 'FAQ', url: 'https://help.netflix.com/support/412' },
-	{ id: 2, text: 'Help Center', url: 'https://help.netflix.com/' },
-	{ id: 3, text: 'Account', url: 'https://www.netflix.com/youraccount' },
-	{ id: 4, text: 'Media Center', url: 'https://media.netflix.com/' },
-	{ id: 5, text: 'Investor Relations', url: 'http://ir.netflix.com/' },
-	{ id: 6, text: 'Jobs', url: 'https://jobs.netflix.com/jobs' },
-	{ id: 7, text: 'Redeem Gift Cards', url: 'https://www.netflix.com/redeem' },
-	{ id: 8, text: 'Buy Gift Cards', url: 'https://www.netflix.com/gift-cards' },
-	{ id: 9, text: 'Ways to Watch', url: 'https://www.netflix.com/watch' },
-	{ id: 10, text: 'Terms of Use', url: 'https://help.netflix.com/legal/termsofuse' },
-	{ id: 11, text: 'Privacy', url: 'https://help.netflix.com/legal/privacy' },
-	{ id: 12, text: 'Cookie Preferences', url: 'https://www.netflix.com/ph/#' },
-	{ id: 13, text: 'Corporate Information', url: 'https://help.netflix.com/legal/corpinfo' },
-	{ id: 14, text: 'Contact Us', url: 'https://help.netflix.com/contactus' },
+	{ id: 1, text: 'FAQ', url: 'https://help.TyroFlix.com/support/412' },
+	{ id: 2, text: 'Help Center', url: 'https://help.TyroFlix.com/' },
+	{ id: 3, text: 'Account', url: 'https://www.TyroFlix.com/youraccount' },
+	{ id: 4, text: 'Media Center', url: 'https://media.TyroFlix.com/' },
+	{ id: 5, text: 'Investor Relations', url: 'http://ir.TyroFlix.com/' },
+	{ id: 6, text: 'Jobs', url: 'https://jobs.TyroFlix.com/jobs' },
+	{ id: 7, text: 'Redeem Gift Cards', url: 'https://www.TyroFlix.com/redeem' },
+	{ id: 8, text: 'Buy Gift Cards', url: 'https://www.TyroFlix.com/gift-cards' },
+	{ id: 9, text: 'Ways to Watch', url: 'https://www.TyroFlix.com/watch' },
+	{ id: 10, text: 'Terms of Use', url: 'https://help.TyroFlix.com/legal/termsofuse' },
+	{ id: 11, text: 'Privacy', url: 'https://help.TyroFlix.com/legal/privacy' },
+	{ id: 12, text: 'Cookie Preferences', url: 'https://www.TyroFlix.com/ph/#' },
+	{ id: 13, text: 'Corporate Information', url: 'https://help.TyroFlix.com/legal/corpinfo' },
+	{ id: 14, text: 'Contact Us', url: 'https://help.TyroFlix.com/contactus' },
 	{ id: 15, text: 'Speed Test', url: 'https://fast.com/' },
-	{ id: 16, text: 'Legal Notices', url: 'https://help.netflix.com/legal/notices' },
-	{ id: 17, text: 'Roseflix Originals', url: 'https://www.netflix.com/ph/browse/genre/839338' }
+	{ id: 16, text: 'Legal Notices', url: 'https://help.TyroFlix.com/legal/notices' },
+	{ id: 17, text: 'TyroFlix Originals', url: 'https://www.TyroFlix.com/ph/browse/genre/839338' }
 ];
