@@ -87,8 +87,8 @@ function HeaderContainer({
 			<Header.Panel>
 				<Header.Logo
 					className={!userDetails ? 'large' : ''}
-					src="/images/branding/TyroFlix_Logo.png"
-					alt="TyroFlix Logo"
+					src="/images/branding/Tyroflix_Logo.png"
+					alt="Tyroflix Logo"
 					to={ROUTES.HOME.path}
 				/>
 				{!logoOnly && userDetails && <Header.Nav>{renderNavLinks()}</Header.Nav>}
