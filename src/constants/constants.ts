@@ -53,7 +53,7 @@ export const FAQS = [
 	},
 	{
 		id: 4,
-		header: 'How do I cancel?',
+		header: 'How do I cancel?  Zach',
 		body:
 			'TyroFlix is flexible. it is free , and we provide an easy delete account Feature.'
 	},
