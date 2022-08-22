@@ -35,7 +35,7 @@ export const HEADER_LINKS = [
 export const FAQS = [
 	{
 		id: 1,
-		header: 'What is TyroFlix?',
+		header: 'What is TyroFlix? Jamar',
 		body:
 			"TyroFlix is a FREE streaming service that offers tutorial and learning media to help you grow your skills to get the career you want.  There's always something new to discover, and new TV shows and movies are added every week!"
 	},
