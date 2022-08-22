@@ -47,7 +47,7 @@ export const FAQS = [
 	},
 	{
 		id: 3,
-		header: 'Where can I watch?',
+		header: 'Where can I watch? Charlie',
 		body:
 			"Watch anywhere, anytime, on an unlimited number of devices. Sign in with your Tyroflix account to watch instantly on the web at tyroflix.com from your personal computer or on any internet-connected device that offers the TyroFlix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.\n\nYou can also download your favourite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take TyroFlix with you anywhere."
 	},
