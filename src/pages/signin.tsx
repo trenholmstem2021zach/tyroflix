@@ -6,23 +6,6 @@ import { FooterContainer, HeaderContainer } from '../containers';
 import mainHttp from '../api/mainEndpoints';
 import { useUser } from '../context/UserContext';
 
-import { useAuth0 } from "@auth0/auth0-react";
-
-const LoginButton = () => {
-  const { loginWithRedirect } = useAuth0();
-
-  return <button onClick={() => loginWithRedirect()}>Log In</button>;
-};
-
-const LogoutButton = () => {
-	const { logout } = useAuth0();
-  
-	return (
-	  <button onClick={() => logout({ returnTo: window.location.origin })}>
-		Log Out
-	  </button>
-	);
-  };
 
 
 function Signin() {
@@ -114,8 +97,7 @@ function Signin() {
 				</Form.Text>
 				<Form.TextSmall>This page is protected by Google reCAPTCHA to ensure you're not a bot.</Form.TextSmall>
 			</Form>
-			<LoginButton/>
-			<LogoutButton/>
+			
 			<FooterContainer />
 		</Scrollbar>
 	);

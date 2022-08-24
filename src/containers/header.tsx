@@ -8,6 +8,8 @@ import movieHttp from '../api/movie';
 import { Profile, ShowOverview } from '../constants/types';
 
 type HeaderContainerType = {
+	myUser?:string;
+	isAuthenticated?:boolean;
 	logoOnly?: boolean;
 	profile?: Profile;
 	setProfile?: (profile?: Profile) => void;
@@ -18,6 +20,8 @@ type HeaderContainerType = {
 	setHeroTrailer?: (heroTrailer?: string | null | undefined) => void;
 };
 function HeaderContainer({
+	myUser,
+	isAuthenticated,
 	logoOnly,
 	profile,
 	setProfile,
