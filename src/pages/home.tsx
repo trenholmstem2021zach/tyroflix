@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Scrollbar from 'react-scrollbars-custom';
-import { LoginButton, LogoutButton } from '..';
 import { BannerContainer, HeaderContainer } from '../containers';
   
 function Home() {
