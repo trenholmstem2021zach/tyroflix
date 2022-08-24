@@ -21,26 +21,27 @@ const LogoutButton = () => {
 		console.log("not logged in")
 	}
 	return (
-		<div>
-			
+		
 	  <button onClick={() => logout({ returnTo: window.location.origin })}>
 		Log Out
 	  </button>
-	  </div>
 	);
   };
 
 
 ReactDOM.render(
 	<React.StrictMode>
-		<GlobalStyles />
+		
 		<Auth0Provider
 			domain="dev-84vaxfa6.us.auth0.com"
 			clientId="yHdPgT52L5c2P4EB1zUDaXsZGUakzUjt"
 			redirectUri={window.location.origin}
-		>	<App />
-		<LoginButton/>
-			<LogoutButton/>
+		>	
+		<React.Fragment>
+		<LoginButton/>	<LogoutButton/>
+		</React.Fragment>
+		<GlobalStyles />
+		<App />
 		</Auth0Provider>
 	</React.StrictMode>,
 	document.getElementById('root')
