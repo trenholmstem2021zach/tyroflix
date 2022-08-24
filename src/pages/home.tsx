@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Scrollbar from 'react-scrollbars-custom';
-import { FaqsContainer, FeatureContainer, FooterContainer, HeaderContainer } from '../containers';
+import { LoginButton, LogoutButton } from '..';
+import { BannerContainer, HeaderContainer } from '../containers';
   
 function Home() {
 	
@@ -20,9 +21,8 @@ function Home() {
 		<Scrollbar noDefaultStyles className="main-scrollbar" onScroll={({ scrollTop }: any) => handleOnScroll(scrollTop)}>
 
 			<HeaderContainer isHeaderShown={isHeaderShown} />
-			<FeatureContainer />
-			<FaqsContainer />
-			<FooterContainer />
+			
+		    <BannerContainer/>
 		</Scrollbar>
 	);
 }

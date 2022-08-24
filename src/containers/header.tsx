@@ -6,10 +6,11 @@ import { useUser } from '../context/UserContext';
 import { HEADER_LINKS } from '../constants/constants';
 import movieHttp from '../api/movie';
 import { Profile, ShowOverview } from '../constants/types';
+import { LoginButton, LogoutButton } from '..';
 
 type HeaderContainerType = {
-	myUser?:string;
-	isAuthenticated?:boolean;
+	myUser?: string;
+	isAuthenticated?: boolean;
 	logoOnly?: boolean;
 	profile?: Profile;
 	setProfile?: (profile?: Profile) => void;
@@ -32,7 +33,7 @@ function HeaderContainer({
 	setCategory
 }: HeaderContainerType) {
 	const { userDetails, setUserDetails } = useUser();
-	const [ searchTerm, setSearchTerm ] = useState('');
+	const [searchTerm, setSearchTerm] = useState('');
 
 	const handleSearch = () => {
 		if (setSearchResult) {
@@ -65,6 +66,7 @@ function HeaderContainer({
 	const renderNavLinks = () => {
 		return window.innerWidth <= 600 ? (
 			<React.Fragment>
+
 				<Header.NavDropdown options={HEADER_LINKS} setCategory={setCategory} category={category} />
 			</React.Fragment>
 		) : (
@@ -88,6 +90,7 @@ function HeaderContainer({
 
 	return (
 		<Header className={isHeaderShown ? 'opaque' : ''}>
+
 			<Header.Panel>
 				<Header.Logo
 					className={!userDetails ? 'large' : ''}
@@ -117,7 +120,7 @@ function HeaderContainer({
 										Manage Profiles
 									</Header.MenuOption>
 									<Header.MenuOption className="no-img" onClick={() => signout()}>
-										Sign out of TyroFlix
+
 									</Header.MenuOption>
 								</Header.Menu>
 							</Header.Dropdown>
@@ -126,6 +129,8 @@ function HeaderContainer({
 						<Header.Button to={ROUTES.SIGNIN.path}>Sign in</Header.Button>
 					))}
 			</Header.Panel>
+			<LoginButton />
+			<LogoutButton />
 		</Header>
 	);
 }
