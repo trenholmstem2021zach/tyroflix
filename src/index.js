@@ -15,7 +15,11 @@ const LoginButton = () => {
 const LogoutButton = () => {
 	const { logout } = useAuth0();
 	const { user, isAuthenticated, isLoading } = useAuth0();
-	if (!isLoading && isAuthenticated) console.log(user);
+	if (!isLoading && isAuthenticated) {
+		 console.log(user);
+	} else {
+		console.log("not logged in")
+	}
 	return (
 		<div>
 			
