@@ -1,15 +1,20 @@
-import { Auth0Provider } from "@auth0/auth0-react";
+import { Auth0Provider, useAuth0 } from "@auth0/auth0-react";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'normalize.css';
 import App from './App';
 import { GlobalStyles } from './global-styles';
-import { useAuth0 } from "@auth0/auth0-react";
 
 export const LoginButton = () => {
 	const { loginWithRedirect } = useAuth0();
+	const { user, isAuthenticated, isLoading } = useAuth0();
 
-	return <button onClick={() => loginWithRedirect()}>Log In</button>;
+	if (user === undefined || isLoading || !isAuthenticated) {
+		return <button onClick={() => loginWithRedirect()}>Log In</button>;
+	} else {
+
+		return <React.Fragment>{user.email}</React.Fragment>
+	}
 };
 
 export const LogoutButton = () => {
@@ -17,17 +22,22 @@ export const LogoutButton = () => {
 	const { user, isAuthenticated, isLoading } = useAuth0();
 	if (!isLoading && isAuthenticated) {
 		console.log(user);
+		return (
+			<React.Fragment>
+				<button onClick={() => logout({ returnTo: window.location.origin })}>
+					Log Out
+				</button>
+			</React.Fragment>
+		);
 	} else {
 		console.log("not logged in")
+		return (
+			<React.Fragment>
+				-
+			</React.Fragment>
+		);
 	}
-	return (
-		<div>
 
-			<button onClick={() => logout({ returnTo: window.location.origin })}>
-				Log Out
-			</button>
-		</div>
-	);
 };
 
 
@@ -39,7 +49,7 @@ ReactDOM.render(
 			clientId="yHdPgT52L5c2P4EB1zUDaXsZGUakzUjt"
 			redirectUri={window.location.origin}
 		>
-			
+
 			<App />
 
 		</Auth0Provider>
