@@ -37,7 +37,7 @@ ReactDOM.render(
 		<Auth0Provider
 			domain="dev-84vaxfa6.us.auth0.com"
 			clientId="yHdPgT52L5c2P4EB1zUDaXsZGUakzUjt"
-			redirectUri="http://localhost:3000/"
+			redirectUri={window.location.origin}
 		>	<App />
 		<LoginButton/>
 			<LogoutButton/>
