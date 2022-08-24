@@ -6,6 +6,8 @@ import { FooterContainer, HeaderContainer } from '../containers';
 import mainHttp from '../api/mainEndpoints';
 import { useUser } from '../context/UserContext';
 
+
+
 function Signin() {
 	const { setUserDetails } = useUser();
 	const [ email, setEmail ] = useState('');
@@ -95,6 +97,7 @@ function Signin() {
 				</Form.Text>
 				<Form.TextSmall>This page is protected by Google reCAPTCHA to ensure you're not a bot.</Form.TextSmall>
 			</Form>
+			
 			<FooterContainer />
 		</Scrollbar>
 	);
