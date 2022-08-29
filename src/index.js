@@ -45,8 +45,8 @@ ReactDOM.render(
 	<React.StrictMode>
 		<GlobalStyles />
 		<Auth0Provider
-			domain="dev-84vaxfa6.us.auth0.com"
-			clientId="yHdPgT52L5c2P4EB1zUDaXsZGUakzUjt"
+			domain="dev-sfpt-yw1.us.auth0.com"
+			clientId="UYpEnuOQkbjHwYtvwNRRkj5MkVu8vRMz"
 			redirectUri={window.location.origin}
 		>
 

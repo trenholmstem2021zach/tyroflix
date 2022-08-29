@@ -38,7 +38,7 @@ function Browse() {
 				setLoading(false);
 			}, 1000);
 			return () => {
-				clearTimeout();
+				clearTimeout(3);
 			};
 		},
 		[ profile ]
