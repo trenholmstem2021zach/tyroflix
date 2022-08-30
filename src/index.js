@@ -5,6 +5,10 @@ import 'normalize.css';
 import App from './App';
 import { GlobalStyles } from './global-styles';
 
+const auth0Domain=process.env.REACT_APP_AUTH0DOMAIN;
+ 
+const auth0ClientId=process.env.REACT_APP_AUTH0CLIENTID;
+ 
 export const LoginButton = () => {
 	const { loginWithRedirect } = useAuth0();
 	const { user, isAuthenticated, isLoading } = useAuth0();
@@ -40,13 +44,12 @@ export const LogoutButton = () => {
 
 };
 
-
 ReactDOM.render(
 	<React.StrictMode>
 		<GlobalStyles />
 		<Auth0Provider
-			domain="dev-sfpt-yw1.us.auth0.com"
-			clientId="UYpEnuOQkbjHwYtvwNRRkj5MkVu8vRMz"
+			domain={auth0Domain}
+			clientId={auth0ClientId}
 			redirectUri={window.location.origin}
 		>
 
